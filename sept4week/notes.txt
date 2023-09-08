@@ -1,0 +1,4 @@
+Text files:
+- with command. hey python try this but if it doesn't work don't worry. with is similar to try
+- open thats how you open a text file
+- with open("talk.txt") as f: - the variable v will be the representation of this file. f is the variable name for talk.txt within the program

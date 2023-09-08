@@ -1,0 +1,16 @@
+with open("talk.txt") as p:
+contents=f.read
+contents = contents.splitlines
+
+individual words: lineparts=contents[0].split
+lineparts = "how", "are" "youprint"
+temp = lineparts[0]
+temp = temp[1:]
+
+temp=temp[1:]
+# this starts it at the 1 position
+#number: sets the start positoin
+
+
+for i in contents:
+    print (i)
