@@ -1,0 +1,12 @@
+boil things down to basics and understand the question
+
+probability:
+- probability of busting
+    add cards up of busting
+     - desired outcomes / total possible
+     - pop out cards that are played from shuffle deck
+    put those into another arrary called cardsplayed
+
+     5 j
+     we need to find the cards that are 6 and under that
+calcualte the probability of husting
