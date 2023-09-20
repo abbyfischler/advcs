@@ -44,6 +44,11 @@ def deal(shuffleddeck):
     print("The players current hand value is:", playersHandValue)
     return playersHand, dealersHand
 
+#probability of busting
+def probability(playersHand,shuffleddeck):
+    
+
+
 def hit(hand,shuffleddeck):
         hand.append(shuffleddeck[0])
         print("New Card 3:",hand[2].name, hand[2].suit, hand[2].value)
@@ -106,9 +111,15 @@ def game():
         elif dealersHandValue == playersHandValue:
             print("Dealer and Player has the same value, dealer wins")
             quit()
+        elif dealersHandValue > playersHandValue:
+            print("Dealer wins!")
+            quit()
         else:
             print("error")
             print(dealersHandValue)
             quit()
        
 game()
+
+# before a player hits tell the players proabability of busting
+
