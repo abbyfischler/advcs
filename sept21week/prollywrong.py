@@ -122,7 +122,7 @@ def game():
 game()
 
 
-
+#len of deck 
 #playershand value
 #21 - playershandvalue
 #probability of busting
