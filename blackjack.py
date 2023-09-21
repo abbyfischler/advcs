@@ -83,12 +83,6 @@ def game():
             print("Invalid input")
             continue
 
-    # else:
-    #     playerDecision = input("Do you want to hit or stand?")
-    #     hit(playersHand,shuffleddeck)
-
-    #dealer turn
-    #if dealer has less than 17, then dealer hits
     while True:
         dealersHandValue = sum([card.value for card in dealersHand])
         if dealersHandValue <= 17: 
