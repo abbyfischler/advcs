@@ -56,7 +56,7 @@ def mazeinit():
          #eveerything else is falls
 
         for j in range(width-1):
-            print(i,j)
+            #print(i,j)
             if contents[i][j] == "#":
                 row.append(True)
                 print(width,height)
@@ -68,7 +68,7 @@ def mazeinit():
             if contents[i][j] == "B":
                 goal = (i, j)
                 row.append(False)
-                walls.append(row)
+        walls.append(row)
 
     return start, goal, walls
 
@@ -81,22 +81,21 @@ def neighbors(self,state,walls):
             result.append(action,(r,c))
     return result
 
-def solve(start1,goal):
+def solve(start1,goal,walls):
     start = Node(state=start1, parent=None, action=None)
-    print(start)
+    print("start",start)
     frontier=Frontier()
     explored = set()
     frontier.add(start)
+    num_explored=0
     
     while frontier.empty is False:
         node = frontier.remove()
         num_explored += 1
-        if node.state == goal:
-            pass
-
-            if start1 == self.goal:
-                actions = []
-                cells = []
+        if node == goal:
+            print("solved")
+            actions = []
+            cells = []
 
             while node.parent is not None: 
                 actions.append(node.action)
@@ -111,15 +110,30 @@ def solve(start1,goal):
             if not frontier.contains_state(state) and state not in explored:
                 child = Node(state=state, parent=node, action=action)
                 frontier.add(child)
-        return solutions
+        #return solutions,frontier
+
+   
 
 start,goal, walls = mazeinit()
-solutions = solve(start, goal)
+#print("start goal and walls",start,goal,walls)
+solutions = solve(start, goal,walls)
+print("solutions",solutions)
 
-#call solve
-#
-#come up with a function to solve maze
-    
+
+
+def cleanSolutions(solution):
+    if solution is not None:
+        for action in actions:
+            print(action)
+        for cell in cell:
+            print(cell)
+        print(solution)
+    else:
+        print("No solution found.")
+
+    return cleanSolutions
+
+print(cleanSolutions(solutions))
 
 # make each line a list of the text file
 # read the maze text file in that intalizes it

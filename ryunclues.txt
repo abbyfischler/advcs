@@ -1,0 +1,16 @@
+3 people were seen leaving the school after the crime
+- Danny, Abby, Jasper
+
+3 weapons were found in the living room
+- hammer, rock, bust of Issac Newton
+
+3 rooms were open on campus at the time
+- The fishbowl
+- room 235 
+- makerspace
+
+Abby's fingerprints were only found on the bust
+Danny's fingerprints weren't on the rock
+
+if James then ~ Abby
+Abby and bust danny and not rock
