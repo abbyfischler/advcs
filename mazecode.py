@@ -26,7 +26,7 @@ class Frontier:
             return False
         
     def remove(self):
-        if self.Empty() == False:
+        if self.empty():
             raise Exception("empty frontier")
         else:
             #remove the last node in the frontier
@@ -34,7 +34,7 @@ class Frontier:
             self.Frontier = self.frontier[:-1]
             return node
     def contains_state(self,state):
-        return any (hide.state == state for node in self.frontier)
+        return any (node.state == state for node in self.frontier)
  
 
 def mazeinit():
@@ -55,7 +55,7 @@ def mazeinit():
          #walls (#) are true can't go through them and everything else you can go through. 
          #eveerything else is falls
 
-        for j in range(width-1):
+        for j in range(width):
             #print(i,j)
             if contents[i][j] == "#":
                 row.append(True)
@@ -119,21 +119,6 @@ start,goal, walls = mazeinit()
 solutions = solve(start, goal,walls)
 print("solutions",solutions)
 
-
-
-def cleanSolutions(solution):
-    if solution is not None:
-        for action in actions:
-            print(action)
-        for cell in cell:
-            print(cell)
-        print(solution)
-    else:
-        print("No solution found.")
-
-    return cleanSolutions
-
-print(cleanSolutions(solutions))
 
 # make each line a list of the text file
 # read the maze text file in that intalizes it
