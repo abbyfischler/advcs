@@ -31,11 +31,43 @@ knowledge = And(
     Or(rock, hammer, boin)
 )
 
+knowledge.add(Not(fishbowl))
+
 knowledge.add(Or
- (And(abby, boin), And(Not(abby), Not(boin)))
- )
-knowledge.add(Or
-    (And(boin, fishbowl), And(Not(boin), Not(fishbowl)))
-    )
+ (And(Not(abby), Not(boin)),
+  And(abby,boin)
+ ))
+
+knowledge.add(Or(
+   Not(danny),
+   Not(makerspace),
+   Not(rock)
+    ))
+
+knowledge.add(Or(
+    And(Not(abby), Not(boin)),
+    And(abby,boin)
+))
+
+knowledge.add(Or(
+    And(Not(boin), Not(fishbowl)),
+    And(boin,fishbowl)
+))
+
+knowledge.add(Or(
+    And(Not(danny), rock),
+    And(danny, Not(rock))
+))
+
+knowledge.add(Or(
+    And(Not(jasper),hammer),
+    And(jasper, Not(hammer))
+))
+
+knowledge.add(Or(
+    And(Not(jasper),room235),
+    And(jasper, Not(room235))
+))
+
 
 check_knowledge(knowledge)
