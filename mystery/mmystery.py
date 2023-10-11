@@ -64,9 +64,21 @@ knowledge.add(Or(
     And(jasper, Not(hammer))
 ))
 
+# abby was never in the makerspace
+knowledge.add(Or(
+    And(abby,Not(makerspace)),
+    And(Not(abby), makerspace)
+))
+
+
 knowledge.add(Or(
     And(Not(jasper),room235),
     And(jasper, Not(room235))
+))
+
+
+knowledge.add(Or(
+    Not(danny),Not(hammer),Not(room235)
 ))
 
 

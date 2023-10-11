@@ -79,6 +79,7 @@ def neighbors(state,walls,height,width):
     result = []
     for action, (r,c) in candidates:
         print("r,c",r,c)
+
         print("height and width",height,width)
         if (0<=r<height) and (0<=c<width) and walls[r][c] is False:
             result.append((action,(r,c)))
