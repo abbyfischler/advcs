@@ -1,4 +1,4 @@
-from logic import *
+from mystery.logic import *
 
 danny = Symbol("Danny")
 abby = Symbol("Abby")
