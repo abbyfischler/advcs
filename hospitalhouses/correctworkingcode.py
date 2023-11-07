@@ -63,7 +63,6 @@ def location(area, hospital):
 
     return currentLocation
 
-# Main function
 def main(area):
     originalCost = calcCost(area)
     print(f"Original Cost: {originalCost}")
@@ -88,6 +87,6 @@ def main(area):
     print(f"Final Cost: {finalCost}")
 
 if __name__ == "__main__":
-    with open("opti.txt") as f:
+    with open("a.txt") as f:
         area = [list(line.strip()) for line in f]
     main(area)

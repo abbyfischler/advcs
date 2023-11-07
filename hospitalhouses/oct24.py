@@ -2,6 +2,8 @@
 # #hillclimbiing algorithmn
 # #find local minimum optizamtion
 
+#tiny map and calculate the distance
+
 import sys
 
 
@@ -44,7 +46,7 @@ def getDistance(houseCoordinates, hospitalCoordinates):
             changingY = i[1] - j[1]
             changingX = abs(changingX)
             changingY = abs(changingY)
-            print("this is changingX",changingX,"and changingY",changingY)
+            print("this is changing X: ",changingX,"and changingY",changingY)
             print("This is manhattandistance before",manhattandistance)
             manhattandistance = min((changingX + changingY),manhattandistance)
             print("this is Manhattan distance after",manhattandistance)
