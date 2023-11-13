@@ -1,0 +1,2 @@
+1) find groups of houses
+find which bs are closests to other b and put hospital next to that

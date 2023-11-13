@@ -105,6 +105,6 @@ def main(area):
     print(f"Final Cost: {finalCost}")
 
 if __name__ == "__main__":
-    with open("a.txt") as f:
+    with open("messup.txt") as f:
         area = [list(line.strip()) for line in f]
     main(area)
