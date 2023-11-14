@@ -1,0 +1,10 @@
+# Node consistencies is just itself
+# Arc consistency a can’t be the same day as b or c
+# Forcing between 2 particular nodes
+
+B can't be on the same day as 
+
+#BACKTRACK ALGORITHM
+#never place it in the array in the first place / check it before u put it in
+#recurssive call
+
