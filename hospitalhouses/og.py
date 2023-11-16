@@ -9,39 +9,40 @@
 #find closest difference btewen the Base
 #Exceptioniteratte through list of hosues
 
-def mazeinit():
+
+# Find the type of a cell in the map
+
+def type():
+    houses = []
+    hospitals = []
     with open("a.txt") as f:
         contents = f.read()
-    if contents.count("A") != 1:
-        raise Exception("A is where the maze starts and there can only be one starting point.")
-    if contents.count("B") != 1:
-        raise Exception("B is the exit of the maze and there is only one exit")
 
-    contents = contents.splitlines()
-    height = len(contents)
-    width = max(len(line) for line in contents)
-    walls = []
+        contents = contents.splitlines()
+        height = len(contents)
+        width = max(len(line) for line in contents)
+      
+        for i in range(height):
+     
+            for j in range(width):
+                if contents[i][j] == "B":
+                    houses.append((i,j))
+                elif contents[i][j] == "H":
+                    hospitals.append((i,j))
+            print(houses)
+            
+    # closest hospital to each house
+    for house in houses:
+        closest_hospital = None
+        closest_distance = None
         
-    for i in range(height):
-        row = []
-         #walls (#) are true can't go through them and everything else you can go through. 
-         #eveerything else is falls
-
-        for j in range(width):
-            #print(i,j)
-            if contents[i][j] == "#":
-                row.append(True)
-                print(width,height)
-            if contents[i][j] == " ":
-                row.append(False)
-            if contents[i][j] == "A":
-                start = (i, j)
-                row.append(False)
-            if contents[i][j] == "B":
-                goal = (i, j)
-                row.append(False)
-        walls.append(row)
-
-    return start, goal, walls
-
-mazeinit()
+        for hospital in hospitals:
+            distance = abs(house[0] - hospital[0]) + abs(house[1] - hospital[1])
+            
+            if closest_distance is None or distance < closest_distance:
+                closest_hospital = hospital
+                closest_distance = distance
+        
+        print(f"House {house} is closest to hospital {closest_hospital}")
+        
+type()
