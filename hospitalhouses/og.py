@@ -89,7 +89,7 @@ def type():
 
 type()
 
-
+#RYUN"S WISE WORDS:
 # now you need to calculate the total cost between the original postion of the hospital and each of the houses in hospital cluster
 # move the hospital to the new space and check to see if the total cost in the new space is better than the original cost.
 # if the total cost is better than position = the better cost position
