@@ -15,6 +15,8 @@
 def type():
     houses = []
     hospitals = []
+    htoh = []
+    hospitalCluster = []
     with open("a.txt") as f:
         contents = f.read()
 
@@ -42,7 +44,23 @@ def type():
             if closest_distance is None or distance < closest_distance:
                 closest_hospital = hospital
                 closest_distance = distance
+                htoh.append((closest_hospital,closest_distance))
+           
+        for i in hospitals:
+            for j in htoh:
+                if j[0] == i:
+                    hospitalCluster.append
+                whateveryouwant(hospitalcluster, i)
+        
+        if htoh
+        if contents[i][j] == "#" #it can move
+        if contents[i][j] != "#" #it can NOT move       
+           
+# now you need to calculate the total cost between the original postion of the hospital and each of hte houses in hospital cluster
+# move the hospital to the new space and check to see if the total cost in the new space is better than the original cost.
+# if the total cost is better than psotion = the better cost position
         
         print(f"House {house} is closest to hospital {closest_hospital}")
         
 type()
+
