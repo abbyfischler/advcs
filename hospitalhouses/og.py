@@ -1,16 +1,78 @@
-#original algorithm for finding hospital hosues
-#1) find groups of houses
-#find which bs are closests to other b and put hospital next to that
+with open("a.txt") as f:
+    contents = f.read().splitlines()
+    height = len (contents)
+    width = max(len(line) for line in contents)
+    for i in range(height):
+        for j in range(width):
+            if contents[i][j] == "B":
+                house.append(i,j)
+            elif contents[i][j] == "H":
+                hospitals.append((i,j))
 
-#STEPS TO DO THIS
-#read the text file
-#looks for housess that are next to each other housess
-#find distance between the different break
-#find closest difference btewen the Base
-#Exceptioniteratte through list of hosues
+class Hospitals:
+    self.houses = []
+    self.coords = []
+class House:
+    self.hospital = []
 
 
-# Find the type of a cell in the map
+for i in Houses:
+    for j in Hospitals:
+        for house in houses:
+            closest_hospital = None
+            closest_distance = None
+        for hospital in hospitals:
+            distance = abs(house[0] - hospital[0]) + abs(house[1] - hospital[1])
+        if closest_distance is None or distance < closest_distance:
+                closest_hospital = hospital
+                closest_distance = distance
+                i.hospital = closest_hospital
+
+            #if the distance is closer than it becomes its closest hospital
+        if distance > closest_distance:
+            i.best_hospital = distance
+    print(closest_hospital)
+
+        # compare i to j distance to closest hospital
+        #if it is less than the closests idstance then that becomes the new closests distance AND that house is added to the hostpial lists of hosues
+        # keep iterating through and see if the next one is closer then that becomes the closests to distance 
+        
+        
+        #calculate the distance between house i and each hospital
+    
+
+        
+        #use old code here
+
+    #if the cost of the distance than closest distance
+    #add the house to h.houses
+    #
+
+
+    #distannce to hosptial
+
+#compare distance to hospital in current loop to distnance to hospital in class defitinion
+#if its closer add the house to the top hospital list
+
+#Hospitals with Houses that are closests to it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def type():
     houses = []
@@ -42,8 +104,19 @@ def type():
             if closest_distance is None or distance < closest_distance:
                 closest_hospital = hospital
                 closest_distance = distance
+   
+   class Hospital:
+        self.houses = [] 
+        for a in hospital:
+            for h in houses:
+                #add each house to the hospital list
+            #add houses closests to it
+            closests_houses = closestsdistance
+            a = []
+            a = closetsdistance
+    
+        htoh.append((closest_hospital, cl))
 
-        htoh.append((closest_hospital, closest_distance))
 
     # Assign houses to hospital clusters
     hospital_cluster = {hospital: [] for hospital in hospitals}
@@ -86,10 +159,7 @@ def type():
     for house_distance in htoh:
         house, (hospital, distance) = house_distance[0], house_distance[1]
         print(f"House {house} is closest to hospital {hospital} with distance {distance}")
+    for i in range:
+        hosue_distance
 
 type()
-
-#RYUN"S WISE WORDS:
-# now you need to calculate the total cost between the original postion of the hospital and each of the houses in hospital cluster
-# move the hospital to the new space and check to see if the total cost in the new space is better than the original cost.
-# if the total cost is better than position = the better cost position
