@@ -28,13 +28,11 @@ def generate_class_combinations(required, electives, grade):
             full_combinations.append(full_combination)
     return full_combinations
 
-
-
 def read_student_classes_sorted_by_grade(file_path):
     students_required_classes = defaultdict(set)
     students_elective_classes = defaultdict(set)
     student_grades = {}
-
+#student
     with open(file_path, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
