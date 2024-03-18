@@ -1,38 +1,58 @@
-#python how to read files
-#
-import csv
 
-def readFile():
-    with open("lfsd.csv", 'r') as file:
-      anything = file.read()
-     
+import csv
+from collections import defaultdict
+
+
+courseintances = defaultdict()
+def readFile(courseintances):
+  with open("lfsd.csv", 'r') as file:
+    anything = file.read()
 #how to select the courses
     lines = anything.splitlines()
-    
+    availablecourses  = []
     
     for i in lines:
-        splittedline = i.split(",")
-        avaiblecourses = splittedline[5]
-        print(specificcourse)
+      splittedline = i.split(",")
+      coursecatalog = splittedline[5]
+      if splittedline[5] in courseintances:
+        courseintances[splittedline[5]]+=1
+      else:
+        courseintances[splittedline[5]] =1
+    print(courseintances)
+readFile(courseintances)
 
-    for i in coursecatalog
-        abbydict[i] += 1
 
-    orderedCourses = []
+      #check the contents in avaible courses to make sure there is only one of each
+#empty dictonary outside the loop 
+       # as i go through and find the course. look how many times it was requested for
+    #for i in avaiblecourses:
+        
+        
+        #count of courses
 
-    for avaiblecourses
+
+
+   # coursecatalog = everything seperated
+
+   # for i in coursecatalog:
+      #  abbydict[i] += 1
+      #  print(abbydict[1])
+
+   # orderedCourses = []
+
+   # for avaiblecourses:
     ## key course Name and the value is how many times that course name is refrenced
 
 
 
-   mghcount = for "modern globaal history" in specificcourse
+  # mghcount = for "modern globaal history" in specificcourse
 
-readFile()
+#readFile()
 
 
-def calculate_sections(class_limit, existing_sections):
-    required_sections = (existing_sections * class_limit) // class_limit
-    modify_database = required_sections != existing_sections
+#d#ef calculate_sections(class_limit, existing_sections):
+   # required_sections = (existing_sections * class_limit) // class_limit
+   # modify_database = required_sections != existing_sections
 
 
 # This code calculates the number of sections required based on the class limit and the number of existing sections in the database.
